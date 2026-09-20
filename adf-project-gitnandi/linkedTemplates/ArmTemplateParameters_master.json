@@ -1,0 +1,45 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-project-gitnandi"
+		},
+		"LS_onPrem_file_password": {
+			"value": ""
+		},
+		"ls_azuresql_password": {
+			"value": ""
+		},
+		"ls_datalake_accountKey": {
+			"value": ""
+		},
+		"LS_onPrem_file_properties_typeProperties_host": {
+			"value": "C:\\ADF_porject"
+		},
+		"LS_onPrem_file_properties_typeProperties_userId": {
+			"value": "NANDIGOWDA\\admin"
+		},
+		"ls_azuresql_properties_typeProperties_server": {
+			"value": "kaashi.database.windows.net"
+		},
+		"ls_azuresql_properties_typeProperties_database": {
+			"value": "azurefundadb"
+		},
+		"ls_azuresql_properties_typeProperties_userName": {
+			"value": "gowda"
+		},
+		"ls_datalake_properties_typeProperties_url": {
+			"value": "https://adfnandistorage.dfs.core.windows.net/"
+		},
+		"ls_github_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

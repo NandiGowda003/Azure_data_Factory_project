@@ -1,0 +1,17 @@
+{
+	"name": "LS_onPrem_file",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "FileServer",
+		"typeProperties": {
+			"host": "C:\\ADF_porject",
+			"userId": "NANDIGOWDA\\admin",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJmNDE1MGQxMC1lODE5LTRiOTgtYWEyMi0zMDY1ZjI2YTRhYzMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "Nandi-selfHosted",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

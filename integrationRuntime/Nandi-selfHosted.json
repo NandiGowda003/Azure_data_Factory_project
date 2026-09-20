@@ -1,0 +1,6 @@
+{
+	"name": "Nandi-selfHosted",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}

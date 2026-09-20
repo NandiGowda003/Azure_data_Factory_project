@@ -1,0 +1,15 @@
+{
+	"name": "adf-project-gitnandi",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a261ada7-963d-4eed-87f8-8237a9f767e5",
+		"tenantId": "39c45f0d-50bd-4ea0-bd32-118cd75d17e9"
+	}
+}

@@ -5,14 +5,61 @@
 		"typeProperties": {
 			"sources": [
 				{
-					"name": "OnPremSource"
+					"dataset": {
+						"referenceName": "ds_source_silver",
+						"type": "DatasetReference"
+					},
+					"name": "DimAirline"
+				},
+				{
+					"dataset": {
+						"referenceName": "ds_dmFlight_source",
+						"type": "DatasetReference"
+					},
+					"name": "DimFlight"
+				},
+				{
+					"dataset": {
+						"referenceName": "ds_dimPass_sourc",
+						"type": "DatasetReference"
+					},
+					"name": "DimPassanger"
+				},
+				{
+					"dataset": {
+						"referenceName": "ds_factbookin_parq",
+						"type": "DatasetReference"
+					},
+					"name": "FactBookings"
+				},
+				{
+					"dataset": {
+						"referenceName": "ds_dimAir_json",
+						"type": "DatasetReference"
+					},
+					"name": "DimAirportJSON"
 				}
 			],
 			"sinks": [],
 			"transformations": [],
 			"scriptLines": [
 				"source(allowSchemaDrift: true,",
-				"     validateSchema: false) ~> OnPremSource"
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> DimAirline",
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> DimFlight",
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> DimPassanger",
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     format: 'parquet') ~> FactBookings",
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     documentForm: 'documentPerLine') ~> DimAirportJSON"
 			]
 		}
 	}

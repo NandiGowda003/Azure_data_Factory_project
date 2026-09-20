@@ -38,14 +38,12 @@
 						"partitionOption": "None"
 					},
 					"sink": {
-						"type": "DelimitedTextSink",
+						"type": "ParquetSink",
 						"storeSettings": {
 							"type": "AzureBlobFSWriteSettings"
 						},
 						"formatSettings": {
-							"type": "DelimitedTextWriteSettings",
-							"quoteAllText": true,
-							"fileExtension": ".txt"
+							"type": "ParquetWriteSettings"
 						}
 					},
 					"enableStaging": false,
@@ -66,7 +64,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_sink_sql",
+						"referenceName": "ds_sink_co",
 						"type": "DatasetReference"
 					}
 				]

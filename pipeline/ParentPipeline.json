@@ -5,8 +5,6 @@
 			{
 				"name": "ExecuteOnPrem",
 				"type": "ExecutePipeline",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"secureInput": false
@@ -33,8 +31,6 @@
 			{
 				"name": "ExecuteOnApi",
 				"type": "ExecutePipeline",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "ExecuteOnPrem",
